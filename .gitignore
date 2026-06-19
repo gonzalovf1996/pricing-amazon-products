@@ -42,7 +42,6 @@ htmlcov/
 .nox/
 .coverage
 .coverage.*
-.cache
 nosetests.xml
 coverage.xml
 *.cover
@@ -77,6 +76,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+.ipynb_checkpoints/
 
 # IPython
 profile_default/
@@ -217,5 +217,30 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Kaggle data
-data/raw/*.csv
+# data
+data/**/*.csv
+data/**/*.parquet
+
+# Training artifacts
+wandb/
+catboost_info/
+mlruns/
+runs/
+checkpoints/
+outputs/
+
+# Hugging Face / model caches
+.cache/
+.huggingface/
+**/.cache/
+
+# Model files
+*.pkl
+*.joblib
+*.pt
+*.bin
+*.safetensors
+*.gguf
+
+# Logs
+*.log
